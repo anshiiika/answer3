@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h4{
+        color: blue;
+    }
+</style>
+<body>
+    <h1>CODE IS DONE</h1>
+    
+
+    <h5>The inputed string is :
+    </h5>
+    <h4>Sentence 1: Hey my name is Anshika Shukla. Sentence 2: I'm doing internship in IITBHU. Sentence 3: This is the javascript assesment test. Sentence 4: Wish me luck</h4>
+    <h3>To see the output: right click then click on inspect then on console and then on Array.
+    </h3>
+    <script>
+        function splitToSentences(str) {
+            const sentences = str.split('.'); //using '.' we will split the sentences 
+            const result = []; // array for storing the sentences with sentence numbers
+            
+            sentences.forEach((sentence, index) => {
+              const sentenceNumber = index + 1; 
+              
+              const formattedSentence = `${sentenceNumber}. ${sentence.trim()}`; //for getting formatted sentences i.e the splitted ones
+              result.push(formattedSentence); // adding the formatted sentence to the result array
+            });
+            
+            return result; // returning the array of sentences with sentence numbers
+          }
+          const sentences = splitToSentences("Sentence 1: Hey my name is Anshika Shukla. Sentence 2: I'm doing internship in IITBHU. Sentence 3: This is the javascript assesment test. Sentence 4: Wish me luck");
+
+console.log(sentences);
+          
+    </script>
+</body>
+</html>
